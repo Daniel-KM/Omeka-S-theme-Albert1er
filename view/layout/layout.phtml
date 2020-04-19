@@ -28,18 +28,18 @@ $userBar = $this->userBar();
         <div id="wrap">
             <header>
                 <?php if ($this->themeSetting('logo')): ?>
-                <a href="<?php echo $site->url(); ?>"><img style="height:80px;" src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" title="Logo"></a>
+                <a href="<?php echo $site->siteUrl(); ?>"><img style="height:80px;" src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" title="Logo"></a>
                 <?php else: ?>
-                <a href="<?php echo $site->url(); ?>" class="site-title"><?php echo $this->pageTitle($site->title()); ?></a>
+                <a href="<?php echo $site->siteUrl(); ?>" class="site-title"><?php echo $this->pageTitle($site->title()); ?></a>
                 <?php endif; ?>
                 <div id="title-site">
-                    <a href="<?php echo $site->url(); ?>" class="site-title"><span id='title-text'>Campagnes scientifiques d'Albert I<sup>er</sup> de Monaco</span></a>
+                    <a href="<?php echo $site->siteUrl(); ?>" class="site-title"><span id='title-text'>Campagnes scientifiques d'Albert I<sup>er</sup> de Monaco</span></a>
                     <h3 style="width:100%;text-align:center;">R&eacute;sultats des campagnes scientifiques accomplies sur son yacht par Albert I<sup>er</sup>, Prince Souverain de Monaco</h3>
 
                     <?php echo $this->SearchingForm(); ?>
 <?php /*
                     <div id="search">
-                        <form method="GET" action="<?php echo $site->url(); ?>/rech">
+                        <form method="GET" action="<?php echo $site->siteUrl(); ?>/rech">
                         <div class="inputs">
                             <input id="searchtext" size="40" name="q" placeholder="Recherche de contenus" value="" type="text" />
                         </div>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 $escape = $this->plugin('escapeHtml');
 $this->htmlElement('body')->appendAttribute('class', 'item resource show');
 $this->headScript()->prependFile($this->assetUrl('js/lightslider.min.js'));
@@ -8,12 +8,12 @@ $this->headLink()->prependStylesheet($this->assetUrl('css/lightslider.min.css'))
 $lightMedia = [];
 $otherMedia = [];
 foreach ($item->media() as $media) {
-    $mediaType = $media->mediaType(); 
-    $mediaRenderer = $media->renderer(); 
+    $mediaType = $media->mediaType();
+    $mediaRenderer = $media->renderer();
     if ((strpos($mediaType, 'image') !== false) || (strpos($mediaRenderer, 'youtube') !== false)) {
-        $lightMedia[] = $media; 
+        $lightMedia[] = $media;
     } else {
-        $otherMedia[] = $media; 
+        $otherMedia[] = $media;
     }
 }
 ?>
@@ -51,7 +51,7 @@ foreach ($item->media() as $media) {
 <div class="property" id="collections-item">
     <h4><?php echo $this->translate('Item sets'); ?></h4>
     <?php foreach ($item->itemSets() as $itemSet): ?>
-    <div class="value"><a href="<?php echo $escape($itemSet->url()); ?>"><?php echo $itemSet->displayTitle(); ?></a></div>
+    <div class="value"><a href="<?php echo $escape($itemSet->siteUrl()); ?>"><?php echo $itemSet->displayTitle(); ?></a></div>
     <?php endforeach; ?>
 </div>
 <?php endif; ?>
@@ -99,10 +99,10 @@ $subjectValues = $item->displaySubjectValues($page, 25, $property);
                   vimeoPlayerParams: {
                       byline : 0,
                       portrait : 0,
-                      color : 'A90707'     
+                      color : 'A90707'
                   },
               });
-          }   
-      });  
+          }
+      });
     });
 </script>
